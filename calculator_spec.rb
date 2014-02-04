@@ -81,4 +81,12 @@ describe Calculator do
       end
     end
   end
+
+  describe '#benefit_env' do
+    context 'When envelope is not included' do
+      it 'The benefit from envelope should equal 0' do
+        expect(@calc.benefit_env).to eq(0)
+      end
+    end
+  end
 end
