@@ -105,5 +105,7 @@ describe Calculator do
         expect(@calc.benefit_total).to eq(0)
       end
     end
+
+
   end
 end

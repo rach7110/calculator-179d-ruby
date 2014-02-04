@@ -38,7 +38,7 @@ class Calculator
   end
 
   def benefit_total
-
+    benefit_light + benefit_hvac + benefit_env
   end
 
 
