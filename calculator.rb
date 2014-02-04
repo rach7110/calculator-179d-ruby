@@ -22,6 +22,7 @@ class Calculator
 
   def benefit_hvac
 
+
   end
 
   def benefit_env
