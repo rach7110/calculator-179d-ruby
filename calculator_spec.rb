@@ -78,6 +78,7 @@ describe Calculator do
         benefit = @calc.rate_hvac * @calc.footprint
 
         expect(benefit).to eq(@calc.benefit_hvac)
+      end
     end
   end
 end
