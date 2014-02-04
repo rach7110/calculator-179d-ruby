@@ -21,8 +21,10 @@ class Calculator
   end
 
   def benefit_hvac
-
-
+    if hvac == true
+    else
+      0
+    end
   end
 
   def benefit_env

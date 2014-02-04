@@ -67,10 +67,9 @@ describe Calculator do
 
   describe '#benefit_hvac' do
     context 'When hvac is not included' do
-      it 'The benefit from hvac should equal 0' do
-        expect(@calc_benefit_hvac).to eq(0)
+      it 'The benefit fom hvac should equal 0' do
+        expect(@calc.benefit_hvac).to eq(0)
       end
     end
   end
-  
 end
