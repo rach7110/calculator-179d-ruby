@@ -105,7 +105,15 @@ describe Calculator do
         expect(@calc.benefit_total).to eq(0)
       end
     end
+    context 'When lighting, hvac, or envelope are included' do
+      it 'Total benefit should equal the sum of the individual benefits' do
+        if @calc.light then l_benefit = @calc.rate_light * @calc.footprint else l_benefit = 0 end
+        if @calc.hvac then h_benefit = @calc.rate_hvac * @calc.footprint else h_benefit = 0 end
+        if @calc.env then e_benefit = @calc.rate_env * @calc.footprint else e_benefit = 0 end
+        total = l_benefit + h_benefit + e_benefit
 
-
+        expect(@calc.benefit_total).to eq(total)
+      end
+    end
   end
 end
