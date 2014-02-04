@@ -13,6 +13,7 @@ class Calculator
 
   end	
 
+  #Calculates the tax benefit from the building's lighting 
   def benefit_light
     if @light == true
       @footprint * @rate_light
@@ -21,6 +22,7 @@ class Calculator
     end
   end
 
+  #Calculates the tax benefit from the building's HVAC 
   def benefit_hvac
     if @hvac == true
       @footprint * @rate_hvac
@@ -29,6 +31,7 @@ class Calculator
     end
   end
 
+  #Calculates the tax benefit from the building's envelope
   def benefit_env
     if @env == true
       @footprint * @rate_env
@@ -37,9 +40,8 @@ class Calculator
     end
   end
 
+  #Calculates the building's total tax benefit 
   def benefit_total
     benefit_light + benefit_hvac + benefit_env
   end
-
-
 end
