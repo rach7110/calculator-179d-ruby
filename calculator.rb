@@ -9,6 +9,7 @@ class Calculator
     @env = env
     @rate_light = 0.60
     @rate_hvac = 0.60
+    @rate_env = 0.60
 
   end	
 
@@ -18,7 +19,6 @@ class Calculator
     else
       0
     end
-
   end
 
   def benefit_hvac
@@ -31,11 +31,10 @@ class Calculator
 
   def benefit_env
     if @env == true
-
+      @footprint * @rate_env
     else
       0
     end
-
   end
 
 

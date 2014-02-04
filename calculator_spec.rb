@@ -88,5 +88,14 @@ describe Calculator do
         expect(@calc.benefit_env).to eq(0)
       end
     end
+    
+    context 'When envelope is included' do
+      it 'The benefit from envelope should be the rate for envelope * the build\'s footprint' do
+        @calc.env = true
+        benefit = @calc.rate_env * @calc.footprint
+        
+        expect(benefit).to eq(@calc.benefit_env)
+      end
+    end
   end
 end
