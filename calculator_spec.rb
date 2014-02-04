@@ -58,8 +58,8 @@ describe Calculator do
   	context 'When light is included.' do
   		it 'The benefit from light should equal the rate for light * the buidling\'s footprint' do
         @calc.light = true
-  			benefit = @calc.footprint * @rate_light
-
+        benefit = @calc.footprint * @calc.rate_light
+        
   			expect(benefit).to eq(@calc.benefit_light)
   		end
   	end
