@@ -37,5 +37,9 @@ class Calculator
     end
   end
 
+  def benefit_total
+
+  end
+
 
 end

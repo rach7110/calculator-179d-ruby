@@ -58,9 +58,9 @@ describe Calculator do
   	context 'When light is included.' do
   		it 'The benefit from light should equal the rate for light * the buidling\'s footprint' do
         @calc.light = true
-        benefit = @calc.rate_light * @calc.footprint
+        l_benefit = @calc.rate_light * @calc.footprint
         
-  			expect(benefit).to eq(@calc.benefit_light)
+  			expect(l_benefit).to eq(@calc.benefit_light)
   		end
   	end
   end
@@ -75,9 +75,9 @@ describe Calculator do
     context 'When hvac is included' do
       it 'The benefit from hvac should equal the rate for hvac * the buidling\'s footprint' do
         @calc.hvac = true
-        benefit = @calc.rate_hvac * @calc.footprint
+        h_benefit = @calc.rate_hvac * @calc.footprint
 
-        expect(benefit).to eq(@calc.benefit_hvac)
+        expect(h_benefit).to eq(@calc.benefit_hvac)
       end
     end
   end
@@ -92,9 +92,17 @@ describe Calculator do
     context 'When envelope is included' do
       it 'The benefit from envelope should be the rate for envelope * the build\'s footprint' do
         @calc.env = true
-        benefit = @calc.rate_env * @calc.footprint
+        e_benefit = @calc.rate_env * @calc.footprint
         
-        expect(benefit).to eq(@calc.benefit_env)
+        expect(e_benefit).to eq(@calc.benefit_env)
+      end
+    end
+  end
+
+  describe '#benefit_total' do
+    context 'When lighting, hvac, and envelope are not included' do
+      it 'Total benefit should equal 0' do
+        expect(@calc.benefit_total).to eq(0)
       end
     end
   end
