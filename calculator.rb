@@ -1,14 +1,21 @@
 class Calculator
-  attr_accessor :footprint, :lighting, :hvac, :env
+  attr_accessor :footprint, :light, :hvac, :env
 
-  def initialize(footprint, lighting=false, hvac=false, env=false)
+
+  def initialize(footprint, light=false, hvac=false, env=false)
     @footprint = footprint
-    @lighting = lighting
+    @light = light
     @hvac = hvac
     @env = env
+    @@rate_light = 0.60
   end	
 
   def benefit_light
+    if light
+      footprint * @@rate_light
+    else
+      0
+    end
 
   end
 

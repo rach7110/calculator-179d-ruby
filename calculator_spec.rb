@@ -19,19 +19,19 @@ describe Calculator do
     		expect(calc.footprint).to eq(100)
     	end
 
-    	it 'should set the lighting, hvac, and envelope to false' do
+    	it 'should set the light, hvac, and envelope to false' do
     		calc = Calculator.new(500)
 
-    		expect(calc.lighting).to be_false
+    		expect(calc.light).to be_false
     		expect(calc.hvac).to be_false
     	end
     end
 
-    context 'If lighting, hvac, or envelope is included' do
-    	it 'should set lighting to true' do
+    context 'If light, hvac, or envelope is included' do
+    	it 'should set light to true' do
     		calc = Calculator.new(100, true)
 
-    		expect(calc.lighting).to be_true
+    		expect(calc.light).to be_true
     	end
 
     	it 'should set hvac to true' do
@@ -46,5 +46,24 @@ describe Calculator do
     		expect(calc.env).to be_true
     	end
     end
+  end
+
+  describe '#benefit_light' do
+  	context 'When light is not included.' do
+  		it 'The benefit from light should equal 0' do
+  			benny = Calculator.new(100)
+
+  			expect(benny.benefit_light).to eq(0)
+  		end
+  	end
+
+  # 	context 'When light is included.' do
+  # 		it 'The benefit from light should equal the rate for light * the buidling\'s footprint' do
+  # 			calc = Calculator.new(100, true)
+  # 			benefit = calc.footprint * @@rate_light
+
+  # 			expect(calc.benefit_light).to eq(@footprint * 0.60)
+  # 		end
+  # 	end
   end
 end
