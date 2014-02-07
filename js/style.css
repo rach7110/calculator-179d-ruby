@@ -1,0 +1,23 @@
+* {
+  margin: 0px;
+  padding: 0px; }
+
+#header {
+  background-color: green;
+  height: 4em; }
+
+#main {
+  margin: 0px 5px 5px 5px;
+  /*@include border-radius(8px, black);*/ }
+
+h1 {
+  color: gray; }
+
+#calculator {
+  width: 400px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  -ms-border-radius: 8px;
+  -o-border-radius: 8px;
+  border-radius: 8px;
+  border: black 1px solid; }

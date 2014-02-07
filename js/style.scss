@@ -1,0 +1,42 @@
+
+
+$color1: gray;
+$color2: green;
+
+@mixin borderRadius {
+	border-radius: 3px bold;
+	border: black 1 solid;
+}
+
+@mixin border-radius($radius, $border-color) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+	border: $border-color 1px solid;
+}
+
+* {
+	margin: 0px;
+	padding: 0px;
+}
+#header {
+	background-color: $color2;
+	height: 4em;
+}
+
+#main {
+	margin: 0px 5px 5px 5px;
+	/*@include border-radius(8px, black);*/
+}
+
+h1 {
+  color: $color1;
+}
+
+#calculator {
+  width: 400px;
+  @include border-radius(8px, black);
+}
+
