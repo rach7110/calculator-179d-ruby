@@ -1,11 +1,8 @@
 $color1: gray;
 $color2: #eee;
 $color3: #ec6f66;
-
-@mixin borderRadius {
-	border-radius: 3px bold;
-	border: black 1 solid;
-}
+$color4: white;
+$color5: #666;
 
 @mixin border-radius($radius, $border-color) {
   -webkit-border-radius: $radius;
@@ -13,7 +10,7 @@ $color3: #ec6f66;
       -ms-border-radius: $radius;
        -o-border-radius: $radius;
           border-radius: $radius;
-	border: $border-color 1px solid;
+	border: $border-color 1px dashed;
 }
 
 /*With box-sizing: border-box
@@ -28,17 +25,28 @@ Borders and padding are drawn inside the set width of your content. The margin i
 	margin: 0px;
 	padding: 0px;
   font-size: 22px;
+  color: $color5;
 }
 
 body {
-  background-color: $color2;
 }
 
-.container {
-	margin: 0 auto;
-	max-width: 960px;
-	width: 90%;
+.canvas {
+  background-image: url('images/background-image-179d.jpg')
 }
+
+.container, #header {
+	margin: auto;
+	max-width: 1216px;
+  height: 100%;
+	width: 90%;
+  background-color: $color4;
+  @include border-radius(0px, black);
+}
+
+/*.container {
+  padding: 0 25px;
+}*/
 
 .column {
   float: left;
@@ -51,21 +59,52 @@ body {
 
 .column.full {
   width: 100%;
-  margin: 0 auto;
 }
-
+  
+.column.two-thirds {
+  width: 65%;
+}
+  
+.column.half {
+  width: 47.5%;
+}
+ 
 .column.one-third {
-  width: 30%; 
+  width: 30%;
+}
+ 
+.column.one-fourth {
+  width: 21.25%;
 }
 
-#header {
-	background-color: $color2;
-	height: 3em;
+/*Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared with either a clearfix or overflow: hidden*/
+.row {
+  overflow: hidden;
+  padding: 30px;
 }
 
-#banner {
-	background-color:$color3;
-	height: 250px;
+/*.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+ 
+.clearfix:after {
+  clear: both;
+}
+ 
+.clearfix {
+  *zoom: 1;
+}*/
+
+#header {	height: 123px; }
+
+#banner {	height: 100%; }
+
+#banner img {
+  margin: 0 auto;
+  display: block;
+  opacity: 50%;
 }
 
 #calculator-title {
@@ -75,8 +114,16 @@ body {
   text-align: left;
 }
 
-#calculator {
-  width: 400px;
-  @include border-radius(8px, black);
+#building-size {
+  text-align: center;
+  border: 1px dashed gray;
 }
+
+#energy-type {
+  text-align: center;
+  border: 1px dashed gray;
+}
+#energy-type img{ max-width: 180px; }
+
+
 
