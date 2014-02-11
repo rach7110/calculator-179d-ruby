@@ -49,9 +49,9 @@ body {
 }
 
 .container, #header {
-	margin: auto;
+	margin: 0 auto;
 	max-width: 1216px;
-  height: 100%;
+  /*height: 100%;*/
 	width: 90%;
   background-color: $color4;
   @include border-radius(0px, black);
