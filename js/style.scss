@@ -21,6 +21,19 @@ Borders and padding are drawn inside the set width of your content. The margin i
   box-sizing: border-box;
 }
 
+/*Mobile Breakpoint - If the browser's screen size is within a set range, a media query will replace the CSS the 
+browser uses. This is the bread and butter of responsive web design.*/
+@media screen and (max-width: 640px) {
+  .column.full,
+  .column.two-thirds,
+  .column.half,
+  .column.one-third,
+  .column.one-fourth {
+    margin: 0;
+    width: 100%;
+  }
+}
+
 * {
 	margin: 0px;
 	padding: 0px;
@@ -83,7 +96,7 @@ body {
   padding: 30px;
 }
 
-/*.clearfix:before,
+.clearfix:before,
 .clearfix:after {
   content: " ";
   display: table;
@@ -95,7 +108,7 @@ body {
  
 .clearfix {
   *zoom: 1;
-}*/
+}
 
 #header {	height: 123px; }
 
