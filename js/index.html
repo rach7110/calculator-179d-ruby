@@ -1,20 +1,49 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <meta name="viewport" content="width=device-width, intitial-scale=1">
   <link rel="stylesheet" type="text/css" href="style.css"/>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script type="text/javascript" src="calculator.js"></script>
   </head>
   <body>
-    <div id="header">
-      ...<em>Header</em>...
-    </div>
-    <div id="main">
-      <h1>179D Calculator</h1>
-      <div class="panel" id="calculator">
-        <p>Keytar mumblecore bicycle rights typewriter Godard, try-hard banjo mlkshk quinoa drinking vinegar iPhone 3 wolf moon Shoreditch Tumblr. Leggings gastropub banh mi 90's distillery ethnic, YOLO next level. YOLO forage selfies deep v. Pitchfork put a bird on it yr, gluten-free gentrify next level viral. Photo booth quinoa 3 wolf moon ennui polaroid Pitchfork. Irony YOLO letterpress cardigan whatever quinoa. Gluten-free ethical fap deep v umami mixtape meh.</p>
-        <input type="text" value="Enter building size (sqft)" style="width: 200px; margin: 10px auto;">
+    <div class="row" id="header">
+      <div class="container">
+        <em>Header</em>
       </div>
+    </div>
+    <div class="row" id="banner">
+      <div class="container">
+        <img src="http://lorempixel.com/960/250/sports/1/">
+      </div>
+    </div>
+
+    <div class="container">
+
+      <div class="row">
+        <div class="column full" id="calculator-title">
+          <strong>179D Tax Estimation: </strong>Calculator &nbsp;&nbsp;&gt;
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="column full">
+          Enter your building's size: <input type="text" style="width: 200px;"> (sqft)
+         </div>
+      </div>
+
+      <div class="row">
+        <div class="column one-third">
+          Efficient Lighting? <input type="checkbox" style="width: 200px;">
+        </div>
+        <div class="column one-third">
+          Efficient HVAC? <input type="checkbox" style="width: 200px;">
+        </div>
+        <div class="column one-third">
+          Efficient Envelope? <input type="checkbox" value="env" style="width: 200px;">
+        </div>
+      </div>
+
     </div>
   </body>
 </html>
