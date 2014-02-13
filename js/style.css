@@ -5,16 +5,6 @@ Borders and padding are drawn inside the set width of your content. The margin i
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/*Mobile Breakpoint - If the browser's screen size is within a set range, a media query will replace the CSS the 
-browser uses. This is the bread and butter of responsive web design.*/
-@media (max-width: 640px) {
-  .column.full,
-  .column.two-thirds,
-  .column.half,
-  .column.one-third,
-  .column.one-fourth {
-    margin: 0;
-    width: 100%; } }
 * {
   margin: 0px;
   padding: 0px;
@@ -62,22 +52,37 @@ browser uses. This is the bread and butter of responsive web design.*/
 .column.one-fourth {
   width: 21.25%; }
 
+/*Mobile Breakpoint - If the browser's screen size is within a set range, a media query will replace the CSS the 
+browser uses. This is the bread and butter of responsive web design.*/
+@media all and (max-width: 640px) {
+  .column.full,
+  .column.two-thirds,
+  .column.half,
+  .column.one-third,
+  .column.one-fourth {
+    margin: 0;
+    width: 100%; }
+
+  img {
+    max-width: 90%; } }
 /*Columns are wrapped in rows to prevent other elements from stacking next to them, otherwise know as clearing issues. Rows are cleared with either a clearfix or overflow: hidden*/
 .row {
   overflow: hidden;
   padding: 30px; }
 
-.clearfix:before,
+/*.clearfix:before,
 .clearfix:after {
-  content: " ";
-  display: table; }
-
+	content: " ";
+	display: table;
+}
+ 
 .clearfix:after {
-  clear: both; }
-
+	clear: both;
+}
+ 
 .clearfix {
-  *zoom: 1; }
-
+	*zoom: 1;
+}*/
 #header {
   height: 123px; }
 
@@ -86,8 +91,7 @@ browser uses. This is the bread and butter of responsive web design.*/
 
 #banner img {
   margin: 0 auto;
-  display: block;
-  opacity: 50%; }
+  display: block; }
 
 #calculator-title {
   margin-top: 30px;

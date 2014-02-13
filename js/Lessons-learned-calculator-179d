@@ -6,6 +6,35 @@ margin: auto
 display: block   <--- !!!!
 }
 -------------------------------------------------
+Media Queries:
+In order to incorprate multiple styles in the same css file, the @media query must be placed below the default stlying. 
+
+*****Example:*******
+
+This DOES works: 
+
+.column.one-fourth {
+	width: 21.25%;
+}
+
+@media all and (max-width: 640px) {
+	.column.one-fourth {
+		margin: 0;
+		width: 100%;
+	}
+}
+
+This  DOES NOT work:
+@media all and (max-width: 640px) {
+	.column.one-fourth {
+		margin: 0;
+		width: 100%;
+	}
+}
+.column.one-fourth {
+	width: 21.25%;
+}
+-------------------------------------------------
 Tutorials - Build a Calculator:
 http://thecodeplayer.com/walkthrough/javascript-css3-calculator
 http://www.codecademy.com/courses/web-intermediate-en-jfhjJ/0/1
