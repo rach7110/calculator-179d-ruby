@@ -1,0 +1,12 @@
+Lessons Learned:
+-------------------------------------------------
+Image centering:
+  {
+margin: auto 
+display: block   <--- !!!!
+}
+-------------------------------------------------
+Tutorials - Build a Calculator:
+http://thecodeplayer.com/walkthrough/javascript-css3-calculator
+http://www.codecademy.com/courses/web-intermediate-en-jfhjJ/0/1
+-------------------------------------------------
