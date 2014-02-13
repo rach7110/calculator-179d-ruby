@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script type="text/javascript" src="calculator.js"></script>
     <!-- Viewport Meta Tag: This enables use of media queries for cross-device layouts -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
   </head>
@@ -23,7 +22,11 @@
           </div>
         </div>
         <div class="row" id="building-size">
-          <div class="column full">
+          <div class="column half">
+            <p>Enter your building's size: <input type="text" style="width: 200px;"> (sqft)</p>
+            <input id="submit-button" type="submit" value="Submit">
+           </div>
+          <div class="column half">
             <p>Enter your building's size: <input type="text" style="width: 200px;"> (sqft)</p>
             <input id="submit-button" type="submit" value="Submit">
            </div>
@@ -55,4 +58,5 @@
       </div>
     </div>
   </body>
+<script type="text/javascript" src="calculator.js"></script>
 </html>
